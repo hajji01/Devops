@@ -1,2 +1,15 @@
+image:
+  file: .gitpod.Dockerfile
+
 tasks:
-  - init: 'npm install'
+  - init: |
+      # Commandes à exécuter lors de la première initialisation
+      git config --global user.name "Hajji Zakaria"
+      git config --global user.email "hajji2901@gmail.com"
+  - command: |
+      # Commandes à exécuter au démarrage de chaque session
+      echo "Bienvenue dans votre espace de travail Gitpod!"
+      bash organise_files.sh
+      bash modifier.sh
+
+
